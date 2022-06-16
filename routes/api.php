@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Http\Resources\AppointmentCollection;
+use App\Model\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('/appointment', function () {
+    return  new AppointmentCollection(Appointment::all());
 });
