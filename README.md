@@ -1,3 +1,12 @@
+
+## setup the app
+
+``` shell
+docker-compose up -d 
+```
+
+
+
 # Laravel level 2
 **L'objectif de ce test est d'observer votre raisonnement et l'application des bonnes pratiques Laravel préconisées dans la documentation au travers d'un développement similaire à ce qui se fait chez Bynativ.**
 
