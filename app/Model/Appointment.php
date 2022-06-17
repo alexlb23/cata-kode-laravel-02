@@ -5,6 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Notifications\Notification;
 
 /**
  * App\Models\Appointment
@@ -41,4 +42,17 @@ class Appointment extends Model
     protected $casts = [
         'date' => 'datetime',
     ];
+
+    /**
+     * Route notifications for the mail channel.
+     *
+     * @param \Illuminate\Notifications\Notification $notification
+     * @return array|string
+     */
+    public function routeNotificationForMail(Notification $notification)
+    {
+        // Return email address only...
+        return $this->email;
+
+    }
 }
