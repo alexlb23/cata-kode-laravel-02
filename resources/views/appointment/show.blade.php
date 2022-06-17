@@ -1,5 +1,8 @@
 @extends('layout')
 @section('content')
-{{dd($appointment->toArray())}}
-
+{{$appointment->id}}
+{{$appointment->name}}
+{{$appointment->email}}
+{{$appointment->date}}
+{{$appointment->message}}
 @endsection
