@@ -3,9 +3,15 @@
 
 ``` shell
 docker-compose up -d 
+docker exec app_php composer install
+docker exec app_php npm install
+docker exec app_php php artisan migrate --seed
 ```
+## jump in the php container
 
-
+``` shell
+docker exec -it app_php  /bin/bash
+```
 
 # Laravel level 2
 **L'objectif de ce test est d'observer votre raisonnement et l'application des bonnes pratiques Laravel préconisées dans la documentation au travers d'un développement similaire à ce qui se fait chez Bynativ.**
